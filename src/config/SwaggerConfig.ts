@@ -5,8 +5,8 @@ export function setupSwagger(app: FastifyInstance) {
       openapi: {
         "openapi": "3.0.0",
         "info": {
-          "title": "CSV Upload API",
-          "description": "API for uploading a CSV file with name, age, and grade columns",
+          "title": "Upload arquivo CSV",
+          "description": "Upload arquivo CSV para processamento",
           "version": "1.0.0"
         },
         "paths": {
