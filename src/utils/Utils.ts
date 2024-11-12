@@ -20,8 +20,8 @@ class Utils{
     }
 
     public validarValorPrestacao(vlTotal: number, vlPrestacoes: number, vlPresta: number ) : boolean{
-
-        return vlTotal / vlPrestacoes == vlPresta
+       const valor = vlTotal / vlPrestacoes;
+       return Math.abs(valor - vlPresta) < 0.01; 
     }
 
 
