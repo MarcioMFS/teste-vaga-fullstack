@@ -19,8 +19,8 @@ class Utils{
         tamanhoDocumento == 11 ? validarCpf(documento) : false;
     }
 
-    public validarValorPrestacao(vlTotal: number, vlPrestacoes: number, vlPresta: number ) : boolean{
-       const valor = vlTotal / vlPrestacoes;
+    public validarValorPrestacao(vlTotal: number, qtPrestacoes: number, vlPresta: number ) : boolean{
+       const valor = vlTotal / qtPrestacoes;
        return Math.abs(valor - vlPresta) < 0.01; 
     }
 
