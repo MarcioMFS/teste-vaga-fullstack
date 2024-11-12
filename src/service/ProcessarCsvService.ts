@@ -41,7 +41,7 @@ class ProcessarCsvService {
             fs.createReadStream(localTemporario).pipe(csv()).on('data', (dados) => {
                 try{
                         dados.cpfCnpjValido = this.utils.validarDocumento(dados.nrCpfCnpj);
-                        dados.calculoValido = this.utils.validarValorPrestacao(dados.vlTotal, dados.vlPrestacoes, dados.vlPresta);
+                        dados.calculoValido = this.utils.validarValorPrestacao(dados.vlTotal, dados.qtPrestacoes, dados.vlPresta);
                         dados.vlTotal = this.utils.formatarBRL(dados.vlTotal);
                         dados.vlPresta = this.utils.formatarBRL(dados.vlPresta);
                         dados.vlMora = this.utils.formatarBRL(dados.vlMora);
